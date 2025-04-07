@@ -1,0 +1,12 @@
+<<<< pro_dna_nonspec_para
+* energy unit (kcal/mol)
+* kT
+energy_unit_pro_dna_nonspec = 0.593
+
+* Gaunsian width for distance constraint
+pro_dna_nonspec_sigma       = 1.0
+* Angle threshold for angle constraint
+pro_dna_nonspec_phi         = 10.0
+
+pro_dna_nonspec_en0         = 0.0
+>>>> 

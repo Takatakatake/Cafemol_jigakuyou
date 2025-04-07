@@ -1,0 +1,615 @@
+<<<< filenames
+
+path = ./
+path_pdb = ./pdb
+path_ini = .
+filename = mr_output_ninf_1
+OUTPUT dcd pdb
+path_natinfo = ./RNApoly_ninfo_edit/一時逆方向/0bp_move
+>>>>
+
+<<<< job_cntl
+
+i_run_mode = 2
+
+i_simulate_type = 1
+
+i_initial_state = 6
+
+>>>>
+
+<<<< unit_and_state
+
+i_seq_read_style = 1
+
+i_go_native_read_style = 2
+
+1-2  dna2  nuc.pdb
+3-10 protein nuc.pdb
+1-2  dna2  poly.pdb
+3-16 protein poly.pdb
+>>>>
+
+
+<<<< native_info_sim1
+NINFO(1/1)  1
+NINFO(1/3)  3
+NINFO(1/4)  4
+NINFO(1/5)  5
+NINFO(1/6)  6
+NINFO(1/7)  7
+NINFO(1/8)  8
+NINFO(1/9)  9
+NINFO(1/10)  10
+NINFO(1/11)  11
+NINFO(1/12)  12
+NINFO(1/13)  13
+NINFO(1/14)  14
+NINFO(1/15)  15
+NINFO(1/16)  16
+NINFO(2/1)  17
+NINFO(2/2)  18
+NINFO(2/3)  19
+NINFO(2/4)  20
+NINFO(2/5)  21
+NINFO(2/6)  22
+NINFO(2/7)  23
+NINFO(2/8)  24
+NINFO(2/9)  25
+NINFO(2/10)  26
+NINFO(2/11)  27
+NINFO(2/12)  28
+NINFO(2/13)  29
+NINFO(2/14)  30
+NINFO(2/15)  31
+NINFO(2/16)  32
+NINFO(3/1)  33
+NINFO(3/2)  34
+NINFO(3/3)  35
+NINFO(3/4)  36
+NINFO(3/5)  37
+NINFO(3/6)  38
+NINFO(3/7)  39
+NINFO(3/8)  40
+NINFO(3/9)  41
+NINFO(3/10)  42
+NINFO(3/11)  43
+NINFO(3/12)  44
+NINFO(3/13)  45
+NINFO(3/14)  46
+NINFO(3/15)  47
+NINFO(3/16)  48
+NINFO(4/1)  49
+NINFO(4/2)  50
+NINFO(4/3)  51
+NINFO(4/4)  52
+NINFO(4/5)  53
+NINFO(4/6)  54
+NINFO(4/7)  55
+NINFO(4/8)  56
+NINFO(4/9)  57
+NINFO(4/10)  58
+NINFO(4/11)  59
+NINFO(4/12)  60
+NINFO(4/13)  61
+NINFO(4/14)  62
+NINFO(4/15)  63
+NINFO(4/16)  64
+NINFO(5/1)  65
+NINFO(5/2)  66
+NINFO(5/3)  67
+NINFO(5/4)  68
+NINFO(5/5)  69
+NINFO(5/6)  70
+NINFO(5/7)  71
+NINFO(5/8)  72
+NINFO(5/9)  73
+NINFO(5/10)  74
+NINFO(5/11)  75
+NINFO(5/12)  76
+NINFO(5/13)  77
+NINFO(5/14)  78
+NINFO(5/15)  79
+NINFO(5/16)  80
+NINFO(6/1)  81
+NINFO(6/2)  82
+NINFO(6/3)  83
+NINFO(6/4)  84
+NINFO(6/5)  85
+NINFO(6/6)  86
+NINFO(6/7)  87
+NINFO(6/8)  88
+NINFO(6/9)  89
+NINFO(6/10)  90
+NINFO(6/11)  91
+NINFO(6/12)  92
+NINFO(6/13)  93
+NINFO(6/14)  94
+NINFO(6/15)  95
+NINFO(6/16)  96
+NINFO(7/1)  97
+NINFO(7/2)  98
+NINFO(7/3)  99
+NINFO(7/4)  100
+NINFO(7/5)  101
+NINFO(7/6)  102
+NINFO(7/7)  103
+NINFO(7/8)  104
+NINFO(7/9)  105
+NINFO(7/10)  106
+NINFO(7/11)  107
+NINFO(7/12)  108
+NINFO(7/13)  109
+NINFO(7/14)  110
+NINFO(7/15)  111
+NINFO(7/16)  112
+NINFO(8/1)  113
+NINFO(8/2)  114
+NINFO(8/3)  115
+NINFO(8/4)  116
+NINFO(8/5)  117
+NINFO(8/6)  118
+NINFO(8/7)  119
+NINFO(8/8)  120
+NINFO(8/9)  121
+NINFO(8/10)  122
+NINFO(8/11)  123
+NINFO(8/12)  124
+NINFO(8/13)  125
+NINFO(8/14)  126
+NINFO(8/15)  127
+NINFO(8/16)  128
+NINFO(9/1)  129
+NINFO(9/2)  130
+NINFO(9/3)  131
+NINFO(9/4)  132
+NINFO(9/5)  133
+NINFO(9/6)  134
+NINFO(9/7)  135
+NINFO(9/8)  136
+NINFO(9/9)  137
+NINFO(9/10)  138
+NINFO(9/11)  139
+NINFO(9/12)  140
+NINFO(9/13)  141
+NINFO(9/14)  142
+NINFO(9/15)  143
+NINFO(9/16)  144
+NINFO(10/1)  145
+NINFO(10/2)  146
+NINFO(10/3)  147
+NINFO(10/4)  148
+NINFO(10/5)  149
+NINFO(10/6)  150
+NINFO(10/7)  151
+NINFO(10/8)  152
+NINFO(10/9)  153
+NINFO(10/10)  154
+NINFO(10/11)  155
+NINFO(10/12)  156
+NINFO(10/13)  157
+NINFO(10/14)  158
+NINFO(10/15)  159
+NINFO(10/16)  160
+NINFO(11/1)  161
+NINFO(11/2)  162
+NINFO(11/3)  163
+NINFO(11/4)  164
+NINFO(11/5)  165
+NINFO(11/6)  166
+NINFO(11/7)  167
+NINFO(11/8)  168
+NINFO(11/9)  169
+NINFO(11/10)  170
+NINFO(11/11)  171
+NINFO(11/12)  172
+NINFO(11/13)  173
+NINFO(11/14)  174
+NINFO(11/15)  175
+NINFO(11/16)  176
+NINFO(12/1)  177
+NINFO(12/2)  178
+NINFO(12/3)  179
+NINFO(12/4)  180
+NINFO(12/5)  181
+NINFO(12/6)  182
+NINFO(12/7)  183
+NINFO(12/8)  184
+NINFO(12/9)  185
+NINFO(12/10)  186
+NINFO(12/11)  187
+NINFO(12/12)  188
+NINFO(12/13)  189
+NINFO(12/14)  190
+NINFO(12/15)  191
+NINFO(12/16)  192
+NINFO(13/1)  193
+NINFO(13/2)  194
+NINFO(13/3)  195
+NINFO(13/4)  196
+NINFO(13/5)  197
+NINFO(13/6)  198
+NINFO(13/7)  199
+NINFO(13/8)  200
+NINFO(13/9)  201
+NINFO(13/10)  202
+NINFO(13/11)  203
+NINFO(13/12)  204
+NINFO(13/13)  205
+NINFO(13/14)  206
+NINFO(13/15)  207
+NINFO(13/16)  208
+NINFO(14/1)  209
+NINFO(14/2)  210
+NINFO(14/3)  211
+NINFO(14/4)  212
+NINFO(14/5)  213
+NINFO(14/6)  214
+NINFO(14/7)  215
+NINFO(14/8)  216
+NINFO(14/9)  217
+NINFO(14/10)  218
+NINFO(14/11)  219
+NINFO(14/12)  220
+NINFO(14/13)  221
+NINFO(14/14)  222
+NINFO(14/15)  223
+NINFO(14/16)  224
+NINFO(15/1)  225
+NINFO(15/2)  226
+NINFO(15/3)  227
+NINFO(15/4)  228
+NINFO(15/5)  229
+NINFO(15/6)  230
+NINFO(15/7)  231
+NINFO(15/8)  232
+NINFO(15/9)  233
+NINFO(15/10)  234
+NINFO(15/11)  235
+NINFO(15/12)  236
+NINFO(15/13)  237
+NINFO(15/14)  238
+NINFO(15/15)  239
+NINFO(15/16)  240
+NINFO(16/1)  241
+NINFO(16/2)  242
+NINFO(16/3)  243
+NINFO(16/4)  244
+NINFO(16/5)  245
+NINFO(16/6)  246
+NINFO(16/7)  247
+NINFO(16/8)  248
+NINFO(16/9)  249
+NINFO(16/10)  250
+NINFO(16/11)  251
+NINFO(16/12)  252
+NINFO(16/13)  253
+NINFO(16/14)  254
+NINFO(16/15)  255
+NINFO(16/16)  256
+1=11.ninfo
+2=12.ninfo
+3=13.ninfo
+4=14.ninfo
+5=15.ninfo
+6=16.ninfo
+7=17.ninfo
+8=18.ninfo
+9=19.ninfo
+10=110.ninfo
+11=111.ninfo
+12=112.ninfo
+13=113.ninfo
+14=114.ninfo
+15=115.ninfo
+16=116.ninfo
+17=21.ninfo
+18=22.ninfo
+19=23.ninfo
+20=24.ninfo
+21=25.ninfo
+22=26.ninfo
+23=27.ninfo
+24=28.ninfo
+25=29.ninfo
+26=210.ninfo
+27=211.ninfo
+28=212.ninfo
+29=213.ninfo
+30=214.ninfo
+31=215.ninfo
+32=216.ninfo
+33=31.ninfo
+34=32.ninfo
+35=33.ninfo
+36=34.ninfo
+37=35.ninfo
+38=36.ninfo
+39=37.ninfo
+40=38.ninfo
+41=39.ninfo
+42=310.ninfo
+43=311.ninfo
+44=312.ninfo
+45=313.ninfo
+46=314.ninfo
+47=315.ninfo
+48=316.ninfo
+49=41.ninfo
+50=42.ninfo
+51=43.ninfo
+52=44.ninfo
+53=45.ninfo
+54=46.ninfo
+55=47.ninfo
+56=48.ninfo
+57=49.ninfo
+58=410.ninfo
+59=411.ninfo
+60=412.ninfo
+61=413.ninfo
+62=414.ninfo
+63=415.ninfo
+64=416.ninfo
+65=51.ninfo
+66=52.ninfo
+67=53.ninfo
+68=54.ninfo
+69=55.ninfo
+70=56.ninfo
+71=57.ninfo
+72=58.ninfo
+73=59.ninfo
+74=510.ninfo
+75=511.ninfo
+76=512.ninfo
+77=513.ninfo
+78=514.ninfo
+79=515.ninfo
+80=516.ninfo
+81=61.ninfo
+82=62.ninfo
+83=63.ninfo
+84=64.ninfo
+85=65.ninfo
+86=66.ninfo
+87=67.ninfo
+88=68.ninfo
+89=69.ninfo
+90=610.ninfo
+91=611.ninfo
+92=612.ninfo
+93=613.ninfo
+94=614.ninfo
+95=615.ninfo
+96=616.ninfo
+97=71.ninfo
+98=72.ninfo
+99=73.ninfo
+100=74.ninfo
+101=75.ninfo
+102=76.ninfo
+103=77.ninfo
+104=78.ninfo
+105=79.ninfo
+106=710.ninfo
+107=711.ninfo
+108=712.ninfo
+109=713.ninfo
+110=714.ninfo
+111=715.ninfo
+112=716.ninfo
+113=81.ninfo
+114=82.ninfo
+115=83.ninfo
+116=84.ninfo
+117=85.ninfo
+118=86.ninfo
+119=87.ninfo
+120=88.ninfo
+121=89.ninfo
+122=810.ninfo
+123=811.ninfo
+124=812.ninfo
+125=813.ninfo
+126=814.ninfo
+127=815.ninfo
+128=816.ninfo
+129=91.ninfo
+130=92.ninfo
+131=93.ninfo
+132=94.ninfo
+133=95.ninfo
+134=96.ninfo
+135=97.ninfo
+136=98.ninfo
+137=99.ninfo
+138=910.ninfo
+139=911.ninfo
+140=912.ninfo
+141=913.ninfo
+142=914.ninfo
+143=915.ninfo
+144=916.ninfo
+145=101.ninfo
+146=102.ninfo
+147=103.ninfo
+148=104.ninfo
+149=105.ninfo
+150=106.ninfo
+151=107.ninfo
+152=108.ninfo
+153=109.ninfo
+154=1010.ninfo
+155=1011.ninfo
+156=1012.ninfo
+157=1013.ninfo
+158=1014.ninfo
+159=1015.ninfo
+160=1016.ninfo
+161=111.ninfo
+162=112.ninfo
+163=113.ninfo
+164=114.ninfo
+165=115.ninfo
+166=116.ninfo
+167=117.ninfo
+168=118.ninfo
+169=119.ninfo
+170=1110.ninfo
+171=1111.ninfo
+172=1112.ninfo
+173=1113.ninfo
+174=1114.ninfo
+175=1115.ninfo
+176=1116.ninfo
+177=121.ninfo
+178=122.ninfo
+179=123.ninfo
+180=124.ninfo
+181=125.ninfo
+182=126.ninfo
+183=127.ninfo
+184=128.ninfo
+185=129.ninfo
+186=1210.ninfo
+187=1211.ninfo
+188=1212.ninfo
+189=1213.ninfo
+190=1214.ninfo
+191=1215.ninfo
+192=1216.ninfo
+193=131.ninfo
+194=132.ninfo
+195=133.ninfo
+196=134.ninfo
+197=135.ninfo
+198=136.ninfo
+199=137.ninfo
+200=138.ninfo
+201=139.ninfo
+202=1310.ninfo
+203=1311.ninfo
+204=1312.ninfo
+205=1313.ninfo
+206=1314.ninfo
+207=1315.ninfo
+208=1316.ninfo
+209=141.ninfo
+210=142.ninfo
+211=143.ninfo
+212=144.ninfo
+213=145.ninfo
+214=146.ninfo
+215=147.ninfo
+216=148.ninfo
+217=149.ninfo
+218=1410.ninfo
+219=1411.ninfo
+220=1412.ninfo
+221=1413.ninfo
+222=1414.ninfo
+223=1415.ninfo
+224=1416.ninfo
+225=151.ninfo
+226=152.ninfo
+227=153.ninfo
+228=154.ninfo
+229=155.ninfo
+230=156.ninfo
+231=157.ninfo
+232=158.ninfo
+233=159.ninfo
+234=1510.ninfo
+235=1511.ninfo
+236=1512.ninfo
+237=1513.ninfo
+238=1514.ninfo
+239=1515.ninfo
+240=1516.ninfo
+241=161.ninfo
+242=162.ninfo
+243=163.ninfo
+244=164.ninfo
+245=165.ninfo
+246=166.ninfo
+247=167.ninfo
+248=168.ninfo
+249=169.ninfo
+250=1610.ninfo
+251=1611.ninfo
+252=1612.ninfo
+253=1613.ninfo
+254=1614.ninfo
+255=1615.ninfo
+256=1616.ninfo
+>>>>
+
+<<<< initial_struct
+1-10 nuc.pdb
+1-16 poly.pdb
+>>>>
+***最初から1bp動いた後のやつを使っている。
+
+<<<< energy_function
+
+LOCAL(1-2/1-2) L_DNA2
+LOCAL(3-16/3-16) L_AICG2_PLUS
+NLOCAL(1-2/1-2)  DNA2 ELE
+NLOCAL(1-2/3-16) ELE EXV GO
+NLOCAL(3-16/3-16) AICG2_PLUS EXV
+i_output_energy_style = 1
+i_coef_from_ninfo =1
+
+>>>>
+
+<<<< aicg
+
+i_aicg = 1
+
+>>>>
+
+
+<<<< flexible_local
+
+k_dih = 1.00000
+
+k_ang = 1.00000
+
+>>>>
+
+<<<< md_information
+
+n_step_sim = 1
+
+n_tstep(1) = 10000
+
+tstep_size = 0.15
+
+n_step_save = 2000
+
+tempk = 300.00
+
+n_seed = 260
+
+i_com_zeroing = 1
+
+i_no_trans_rot = 0
+
+n_step_neighbor = 20
+
+>>>>
+
+<<<< energy_minimize
+i_method(1) = 1
+i_out = 0
+n_out_step = 100
+sd_lambda_init = 0.1
+sd_rho_accept = 1.2
+sd_rho_reject = 0.2
+cg_lambda_init = 1.0
+cg_rho = 0.9
+cg_wolfe_c1 = 0.0001
+cg_wolfe_c2 = 0.1
+>>>>
+

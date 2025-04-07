@@ -1,0 +1,179 @@
+
+# For a single processor calculation
+variable T equal 300 # Simulation temperature
+variable salt equal 100.0 # Salt concentration [mM]
+
+# Random number seed for Langevin integrator
+variable random equal 12345
+
+# Specify the different interaction styles
+bond_style      class2
+angle_style     hybrid harmonic stacking/3spn2
+dihedral_style  3spn2
+# pair_stype 3spn2 [dna type] [temperature] [salt concentration (mM)] [short range cutoff] [Coulombic cutoff]
+pair_style      hybrid/overlay 3spn2 adna ${T} ${salt} 18.0 50.0
+pair_style      hybrid/overlay 3spn2 adna 300 ${salt} 18.0 50.0
+pair_style      hybrid/overlay 3spn2 adna 300 100 18.0 50.0
+
+# Periodic boundary conditions
+boundary p p p
+
+# Turn on Newton's 2nd law
+newton on  #yes
+
+# Read in the configuration
+read_data adna_conf.in
+  orthogonal box = (-94.208 -94.208 -94.208) to (94.208 94.208 94.208)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  190 atoms
+  scanning bonds ...
+  2 = max bonds/atom
+  scanning angles ...
+  3 = max angles/atom
+  scanning dihedrals ...
+  1 = max dihedrals/atom
+  reading bonds ...
+  188 bonds
+  reading angles ...
+  308 angles
+  reading dihedrals ...
+  120 dihedrals
+  3 = max # of 1-2 neighbors
+  4 = max # of 1-3 neighbors
+  6 = max # of 1-4 neighbors
+  9 = max # of special neighbors
+  special bonds CPU = 8.79765e-05 secs
+  read_data CPU = 0.00254107 secs
+
+# Specify the pair coefficients
+pair_coeff  1   1   3spn2   0.239006    4.500000
+pair_coeff  2   2   3spn2   0.239006    6.200000
+pair_coeff  3   3   3spn2   0.239006    4.460000
+pair_coeff  4   4   3spn2   0.239006    5.500000
+pair_coeff  5   5   3spn2   0.239006    4.200000
+pair_coeff  6   6   3spn2   0.239006    5.700000
+pair_coeff  7   7   3spn2   0.239006    4.460000
+pair_coeff  8   8   3spn2   0.239006    5.500000
+pair_coeff  9   9   3spn2   0.239006    4.200000
+pair_coeff  10  10  3spn2   0.239006    5.700000
+pair_coeff  11  11  3spn2   0.239006    4.460000
+pair_coeff  12  12  3spn2   0.239006    5.500000
+pair_coeff  13  13  3spn2   0.239006    4.200000
+pair_coeff  14  14  3spn2   0.239006    5.700000
+pair_modify mix arithmetic
+pair_coeff 1*17 15*17 none # Zeroing out other interactions
+
+# Specify parameters for the neighbor list
+neighbor	4.0 multi
+neigh_modify    check yes
+
+# A timestep of 0.02 ps
+timestep 20.0
+
+# Initialize velocities from a Gaussian distribution
+velocity all create ${T} ${random} rot yes mom yes dist gaussian
+velocity all create 300 ${random} rot yes mom yes dist gaussian
+velocity all create 300 12345 rot yes mom yes dist gaussian
+
+# Calculating the different components of the non-bonded energy
+compute edna all pair 3spn2
+variable ebp equal c_edna[1] # Base pairing energy
+variable ecstk equal c_edna[2] # Cross stacking energy
+variable eexcl equal c_edna[3] # Excluded volume energy
+variable dna_ecoul equal c_edna[4] # DNA coulombic energy
+variable nbp equal c_edna[5] # Number of base pairs
+
+# Specifying the frequency of thermodynamic output
+thermo 2000
+thermo_style custom step v_nbp ebond eangle edihed v_ebp v_ecstk v_eexcl v_dna_ecoul temp
+
+# Specifying a Langevin integrator to perform a simulation in the NVT ensemble
+fix 1 all langevin ${T} ${T} 500 ${random} gjf yes
+fix 1 all langevin 300 ${T} 500 ${random} gjf yes
+fix 1 all langevin 300 300 500 ${random} gjf yes
+fix 1 all langevin 300 300 500 12345 gjf yes
+fix 2 all nve
+
+# Write configuration to file
+dump 1 all xyz 2000 traj.xyz
+
+# Run X number of steps
+run 50000
+Neighbor list info ...
+  update every 1 steps, delay 10 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 54
+  ghost atom cutoff = 54
+  binsize = 188.416, bins = 1 1 1
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair 3spn2, perpetual, skip from (2)
+      attributes: half, newton on
+      pair build: skip
+      stencil: none
+      bin: none
+  (2) neighbor class addition, perpetual
+      attributes: half, newton on
+      pair build: half/multi/newton
+      stencil: half/multi/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 9.266 | 9.266 | 9.266 Mbytes
+Step v_nbp E_bond E_angle E_dihed v_ebp v_ecstk v_eexcl v_dna_ecoul Temp 
+       0           32 3.3844161e-06   -196.16418   -172.08408     151.2646   -38.325871            0    16.188186          300 
+    2000           27    24.457434    -119.7887   -159.03829   -130.37677   -26.352019    0.5732872    15.790348    276.22872 
+    4000           25    24.787547   -118.48261   -161.57593   -118.33285   -25.910994   0.41515489     15.41445    290.35173 
+    6000           24    29.222604   -122.07332   -160.58416   -121.66256   -27.575544   0.18960234    16.007911    277.22732 
+    8000           21    20.358664   -114.82041   -158.34534   -122.97412   -25.600214   0.16815484    15.406009    304.28649 
+   10000           27    21.619033   -103.97472   -156.46915   -129.09914   -24.132359    1.3402903    14.449953    277.61435 
+   12000           22    28.543579   -105.27986   -158.13025   -113.46477    -26.11772  0.079166084     14.98168    263.30924 
+   14000           26    23.949005   -103.93301   -158.64047   -119.41604   -25.522073  0.018947385    14.200084    298.73737 
+   16000           20    29.442517    -106.9854   -157.59575   -112.07962   -23.639484   0.14851094    14.919855    271.83226 
+   18000           22    22.117363   -107.43431   -156.27907   -116.26799   -22.081919   0.84742945    14.719363    305.74274 
+   20000           20    29.291918   -114.36303   -157.07844   -116.11037   -25.245175    0.2519354    15.341395    287.57889 
+   22000           21    25.135842   -100.78571   -157.77082   -121.10901   -22.513551   0.80805754    16.388283    296.29073 
+   24000           22    20.526806   -114.88105   -154.51404   -114.46543   -22.831209   0.56639551    15.385261    297.69035 
+   26000           23    24.175659   -108.56055   -152.62298   -118.48438   -22.120243   0.62836749    14.200227    280.01836 
+   28000           24    24.235507   -95.994325   -154.36471   -122.89248   -25.884525   0.88295318     14.81105    302.94209 
+   30000           20    26.665949   -99.885862   -150.96429   -107.33963   -20.134175   0.19376205     14.44909    264.81273 
+   32000           22    20.097326   -91.934599   -151.12855   -115.16753   -22.668029   0.31305426    14.390121    262.13598 
+   34000           23    22.289409   -119.73984   -158.41515   -119.86837   -23.434014   0.24708803    15.282463    287.61149 
+   36000           27    29.046733   -100.19819   -155.81617   -120.78039   -24.336014   0.15411759    15.390584    274.59784 
+   38000           27    19.785642    -112.0154   -156.73584   -120.34798   -23.971377   0.30771608    16.361922     299.5175 
+   40000           23    27.345293   -102.16106   -154.02767   -118.31593   -24.080863   0.23104058    16.164054    273.12657 
+   42000           22    26.997402   -120.07935   -158.74543   -111.42994   -24.700764   0.56154826    16.067056    286.36901 
+   44000           24    23.927611   -107.90932   -158.87565   -114.79945   -22.775814   0.29640711    14.647078    302.09572 
+   46000           22    20.107129    -109.9421   -153.22111   -114.48188   -23.459847   0.20582934    15.524914    273.11905 
+   48000           21     19.50833   -98.677453   -154.09911   -114.14388    -21.18612    0.2098834    13.390563    273.97594 
+   50000           23    21.380619   -112.73141   -156.11599   -114.16631   -22.322706  0.044173822    13.895045    282.37754 
+Loop time of 23.0808 on 1 procs for 50000 steps with 190 atoms
+
+Performance: 3743.368 ns/day, 0.006 hours/ns, 2166.301 timesteps/s
+100.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 20.137     | 20.137     | 20.137     |   0.0 | 87.24
+Bond    | 2.1616     | 2.1616     | 2.1616     |   0.0 |  9.37
+Neigh   | 0.22957    | 0.22957    | 0.22957    |   0.0 |  0.99
+Comm    | 0.014905   | 0.014905   | 0.014905   |   0.0 |  0.06
+Output  | 0.004483   | 0.004483   | 0.004483   |   0.0 |  0.02
+Modify  | 0.49961    | 0.49961    | 0.49961    |   0.0 |  2.16
+Other   |            | 0.03407    |            |       |  0.15
+
+Nlocal:    190 ave 190 max 190 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    11 ave 11 max 11 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    14515 ave 14515 max 14515 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 14515
+Ave neighs/atom = 76.3947
+Ave special neighs/atom = 7.13684
+Neighbor list builds = 1163
+Dangerous builds = 0
+
+Please see the log.cite file for references relevant to this simulation
+
+Total wall time: 0:00:23

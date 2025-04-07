@@ -1,0 +1,6 @@
+#ifndef CAFEMOL_CONFIG_H
+#define CAFEMOL_CONFIG_H
+
+#define PROJECT_VERSION "@PROJECT_VERSION@"
+
+#endif /* CAFEMOL_CONFIG_H */

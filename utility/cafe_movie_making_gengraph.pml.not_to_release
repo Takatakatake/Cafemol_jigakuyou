@@ -1,0 +1,99 @@
+reinitialize
+load ./data/cafemol.movie, object=workobj, format=pdb, multiplex=0
+
+#representation and color
+as sphere, (not chain x)
+alter all, vdw=2.5
+rebuild
+set sphere_transparency, 0.6, (chain h)
+set ribbon_trace_atoms, 1
+set ribbon_radius, 0.7
+show_as ribbon, chain x 
+bg_color white
+color cyan, chain a+b+c
+color deepteal, chain d+e+f
+color lightteal, chain g+h+i
+color orange, chain x
+select exit, (chain a and (i. 20,21,92,95,96) or chain b and (i. 9-12))
+color ruby, exit
+select entrance, (chain a and (i. 230,231,309-313,366-372))
+color red, entrance
+select entrance2, (chain d and (i. 230,231,309-313,366-372))
+color red, entrance2
+select binding, (chain g and (i. 103-105,144,145,178,179))
+color warmpink, binding 
+
+# fit frames and smooth the trajectory 
+intra_fit (not chain x), 1
+#       select,  passes, window, first, last, ends
+smooth workobj,       3,      5,     2, 1010,   0
+
+# time indicator
+set label_position, (0,0,0)
+set label_color, black 
+set label_size, 15
+pseudoatom pa, pos=[12, 70, -10]
+hide (pa)
+
+# map states to frames
+python
+# total 1011 frames
+# 51 frames before switching 
+for i in range(1,52,1):
+  cmd.mset(str(i),str(i))
+  state=(i-1)*4000
+  cmd.mdo(i,"label pa, '"+str(state)+"'")
+
+# 261 frames after switching and before export
+for i in range(52,313,1):
+  cmd.mset(str(i),str(i))
+  state=(i-1)*4000
+  cmd.mdo(i,"label pa, '"+str(state)+"'")
+
+# 450 frames export
+for i in range(313,763,1):
+  cmd.mset(str(i),str(i))
+  state=(312-1)*4000+(i-312)*20
+  cmd.mdo(i,"label pa, '"+str(state)+"'")
+
+# 248 frames for post-export
+for i in range(763,1011,1):
+  cmd.mset(str(i),str(i))
+  state=1254000+(i-763)*20000
+  cmd.mdo(i,"label pa, '"+str(state)+"'")
+
+# final frame
+cmd.mset("1011","1011")
+cmd.mdo(1011,"label pa, '6200000'")
+
+python end
+
+set_view (\
+     0.378969312,   -0.411163270,    0.829050303,\
+    -0.784680188,   -0.617686391,    0.052347533,\
+     0.490569890,   -0.670377791,   -0.556715667,\
+     0.000000000,   -0.000000000, -336.343536377,\
+     0.004297256,    0.117418289,    0.011384964,\
+   274.063507080,  398.623596191,  -20.000000000 )
+
+frame 1
+scene 001, store
+mview store, scene=001
+
+frame 753
+scene 002, store
+mview store, scene=002
+
+frame 754
+hide (workobj and chain x)
+scene 003, store
+mview store, scene=003
+
+frame 1
+
+python
+for i in range(1,1012,1):
+  cmd.frame(i)
+  cmd.png("t_movgraph/t_"+"%04d"%i, 600, 480, 96, 1)
+python end
+

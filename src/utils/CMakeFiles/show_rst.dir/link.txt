@@ -1,0 +1,1 @@
+/usr/bin/gfortran  -ffree-line-length-0 -cpp -O3 -DNDEBUG -O3 -O3 CMakeFiles/show_rst.dir/show_rst.F90.o -o ../../bin/show_rst  ../libcafemol.a 

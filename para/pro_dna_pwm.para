@@ -1,0 +1,12 @@
+<<<< pro_dna_pwm_para
+* energy unit (kcal/mol)
+* kT
+energy_unit_pro_dna_pwm = 0.593
+
+* Gaussian width for distance constraint
+pro_dna_pwm_sigma       = 1.0
+* Angle threshold for angle constraint
+pro_dna_pwm_phi         = 10.0
+
+pro_dna_pwm_en0         = 0.0
+>>>> 

@@ -1,0 +1,61 @@
+*************************************************************************
+**                                                                     **
+**                       Input file of CafeMol                         **
+**                                                                     **
+**        This file is for folding simulation with AICG2PLUS by MD     **
+**                                                                     **
+*************************************************************************
+
+<<<< filenames
+path = ./example/proteing
+filename = proteing
+OUTPUT psf rst pdb movie dcd
+path_pdb = ./pdb
+path_aicg = ./aicg
+path_ini = ./ini
+path_natinfo = ./ninfo
+path_para=./para
+
+>>>> 
+
+<<<< job_cntl  
+i_run_mode = 2
+i_simulate_type = 1
+i_initial_state = 1
+>>>>
+
+
+<<<< unit_and_state
+i_seq_read_style = 1
+i_go_native_read_style = 1
+1    protein                      2igd.pdb
+>>>>
+
+<<<< energy_function        
+LOCAL(1/1)     L_AICG2_PLUS
+NLOCAL(1/1)     AICG2_PLUS EXV
+i_use_atom_protein = 0
+i_use_atom_dna = 0
+>>>>
+
+<<<< aicg
+i_aicg = 1
+>>>>
+
+<<<< md_information
+n_step_sim = 1
+n_tstep(1) = 100000
+tstep_size = 0.4
+n_step_save = 100
+n_step_neighbor = 100
+i_com_zeroing = 1
+i_no_trans_rot = 0
+tempk = 300.00
+n_seed = 1
+>>>>
+
+
+<<<< flexible_local
+k_dih = 1.00000
+k_ang = 1.00000
+>>>>

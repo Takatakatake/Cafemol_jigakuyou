@@ -1,0 +1,18 @@
+CafeMol license agreement:
+
+CafeMol is the non-commercial software that the user can use, modify, and improve 
+the CafeMol source code at ones own expense. The source code of CafeMol is available 
+for the internal use only at this moment: The user shall not distribute or transfer 
+CafeMol, and any modifications, improvements, or derivatives to CafeMol that the user 
+may create.
+
+CafeMol is a research tool still in the development stage, that is being supplied "AS
+IS" without any accompanying services or improvements from developers and the program
+is distributed to enable users to utilize CafeMol in their researches. Developers accept
+no obligation to provide maintenance nor does it guarantee expected functionality of
+CafeMol or of any part of CafeMol.
+
+Any published work which utilizes CafeMol should include the citation "CafeMol: A
+coarse-grained biomolecular simulator for simulating proteins at work. H. Kenzaki,
+N. Koga, N. Hori, R. Kanada, W. Li, K. Okazaki, XQ. Yao, and S. Takada Journal of
+Chemical Theory and Computation (2011) 7(6) pp1979-1989 DOI:10.1021/ct2001045".

@@ -1,0 +1,5 @@
+2023-09-07 17:38:09 yamada-NK50SZ INFO [mpi] global myrank = 0
+2023-09-07 17:38:09 yamada-NK50SZ INFO [mpi] total nprocs = 1
+2023-09-07 17:38:09 yamada-NK50SZ INFO [omp] nthreads = 1
+2023-09-07 17:38:09 yamada-NK50SZ INFO ncores = 1
+2023-09-07 17:38:09 yamada-NK50SZ INFO i_run_mode = 2

@@ -1,0 +1,25 @@
+To compile, please type
+
+make
+
+If necessary, please edit Makefile. In the original Makefile, the program is compiled by gfortran.
+If necessary, please change the path of fragment library file(TCAG_library.txt). The path is variable　"ref_title" written in const_para.F90. 
+
+To run the program, please type
+
+./DNAbackmap input.txt
+
+Input file format is
+
+FILENAME cgDNA1.pdb aaDNA1.pdb
+FILENAME cgDNA2.pdb aaDNA2.pdb
+FILENAME cgDNA3.pdb aaDNA3.pdb
+FILENAME cgDNA4.pdb aaDNA4.pdb
+FILENAME cgDNA5.pdb aaDNA5.pdb
+		.
+		.
+		.
+
+DNAbackmap program reconstruct atomistic model(name aaDNA~.pdb) from cgDNA~.pdb 
+
+If you use DNAbackmap on your work, please cite bioRxiv 205062; doi: https://doi.org/10.1101/205062.

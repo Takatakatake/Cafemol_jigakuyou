@@ -1,0 +1,122 @@
+MODEL         1     step:         0
+<< protein_  1
+ATOM      1 DP   DT  A   1      87.281   4.782  30.575
+ATOM      2 DS   DT  A   1      84.339   6.370  28.579
+ATOM      3 DB   DT  A   1      81.961   2.987  30.825
+ATOM      4 DP   DT  A   2      84.211   9.997  28.850
+ATOM      5 DS   DT  A   2      80.125  10.246  28.632
+ATOM      6 DB   DT  A   2      79.684   6.670  31.520
+ATOM      7 DP   DC  A   3      78.005  13.474  28.777
+ATOM      8 DS   DC  A   3      74.085  12.745  27.329
+ATOM      9 DB   DC  A   3      70.372  10.167  28.813
+ATOM     10 DP   DC  A   4      73.687  14.703  24.032
+ATOM     11 DS   DC  A   4      69.869  13.246  23.335
+ATOM     12 DB   DC  A   4      67.618  11.699  27.104
+ATOM     13 DP   DC  A   5      68.529  15.036  20.351
+ATOM     14 DS   DC  A   5      64.822  15.880  22.367
+ATOM     15 DB   DC  A   5      64.908  14.137  26.829
+ATOM     16 DP   DA  A   6      63.366  19.033  21.135
+ATOM     17 DS   DA  A   6      59.355  18.260  22.535
+ATOM     18 DB   DA  A   6      57.426  17.532  27.521
+ATOM     19 DP   DC  A   7      56.811  17.483  19.774
+ATOM     20 DS   DC  A   7      53.693  16.995  22.394
+ATOM     21 DB   DC  A   7      54.144  18.538  26.754
+ATOM     22 DP   DC  A   8      50.846  16.232  20.265
+ATOM     23 DS   DC  A   8      48.515  19.200  22.466
+ATOM     24 DB   DC  A   8      51.147  20.832  26.136
+ATOM     25 DP   DT  A   9      46.104  21.159  20.416
+ATOM     26 DS   DT  A   9      43.898  22.502  24.001
+ATOM     27 DB   DT  A   9      45.376  26.379  26.573
+ATOM     28 DP   DT  A  10      40.746  20.454  24.438
+ATOM     29 DS   DT  A  10      39.323  22.844  27.507
+ATOM     30 DB   DT  A  10      41.692  26.947  26.902
+ATOM     31 DP   DT  A  11      35.772  21.859  27.881
+ATOM     32 DS   DT  A  11      34.404  25.827  28.316
+ATOM     33 DB   DT  A  11      37.900  27.955  26.365
+ATOM     34 DP   DT  A  12      30.946  26.365  27.086
+ATOM     35 DS   DT  A  12      30.066  30.346  28.696
+ATOM     36 DB   DT  A  12      32.046  34.408  27.032
+TER
+>>
+<< protein_  2
+ATOM     37 DP   DG DB   1      49.674  22.876  38.995
+ATOM     38 DS   DG DB   1      49.916  20.149  36.718
+ATOM     39 DB   DG DB   1      51.671  20.694  31.648
+ATOM     40 DP   DG DB   2      50.903  16.954  38.485
+ATOM     41 DS   DG DB   2      50.408  14.487  35.809
+ATOM     42 DB   DG DB   2      53.151  16.938  32.013
+ATOM     43 DP   DT DB   3      50.792  10.765  36.101
+ATOM     44 DS   DT DB   3      53.121  10.475  32.562
+ATOM     45 DB   DT DB   3      55.684  14.554  32.025
+ATOM     46 DP   DG DB   4      54.456   6.903  32.255
+ATOM     47 DS   DG DB   4      58.264   6.966  31.569
+ATOM     48 DB   DG DB   4      62.140  10.245  29.781
+ATOM     49 DP   DG DB   5      58.902   3.288  30.933
+ATOM     50 DS   DG DB   5      60.725   3.601  27.599
+ATOM     51 DB   DG DB   5      64.415   7.489  28.172
+ATOM     52 DP   DG DB   6      61.912   0.551  25.769
+ATOM     53 DS   DG DB   6      65.349   1.941  23.922
+ATOM     54 DB   DG DB   6      67.320   5.893  27.167
+TER
+>>
+<< protein_  3
+ATOM     55 DP   DT  C   1     -24.085  68.914  20.811
+ATOM     56 DS   DT  C   1     -20.514  67.777  19.171
+ATOM     57 DB   DT  C   1     -18.345  70.310  22.403
+ATOM     58 DP   DT  C   2     -20.108  63.927  19.393
+ATOM     59 DS   DT  C   2     -15.926  64.187  19.596
+ATOM     60 DB   DT  C   2     -16.773  67.017  22.984
+ATOM     61 DP   DC  C   3     -14.364  60.954  20.276
+ATOM     62 DS   DC  C   3     -10.265  61.955  19.310
+ATOM     63 DB   DC  C   3      -7.088  64.821  21.370
+ATOM     64 DP   DC  C   4      -9.229  60.111  16.180
+ATOM     65 DS   DC  C   4      -5.480  61.807  16.105
+ATOM     66 DB   DC  C   4      -3.970  63.479  20.173
+ATOM     67 DP   DC  C   5      -3.371  60.307  13.283
+ATOM     68 DS   DC  C   5      -0.155  59.563  16.005
+ATOM     69 DB   DC  C   5      -1.018  61.211  20.433
+ATOM     70 DP   DA  C   6       1.510  56.436  14.910
+ATOM     71 DS   DA  C   6       5.230  57.354  17.136
+ATOM     72 DB   DA  C   6       6.028  58.113  22.422
+ATOM     73 DP   DC  C   7       8.196  58.301  14.958
+ATOM     74 DS   DC  C   7      10.734  58.839  18.172
+ATOM     75 DB   DC  C   7       9.376  57.166  22.373
+ATOM     76 DP   DC  C   8      13.892  59.679  16.679
+ATOM     77 DS   DC  C   8      15.880  56.782  19.259
+ATOM     78 DB   DC  C   8      12.542  55.036  22.365
+ATOM     79 DP   DT  C   9      18.738  55.115  17.626
+ATOM     80 DS   DT  C   9      20.364  53.781  21.391
+ATOM     81 DB   DT  C   9      18.553  49.928  23.645
+ATOM     82 DP   DT  C  10      23.305  55.971  22.484
+ATOM     83 DS   DT  C  10      24.142  53.676  25.842
+ATOM     84 DB   DT  C  10      22.196  49.482  24.693
+ATOM     85 DP   DT  C  11      27.485  54.802  26.789
+ATOM     86 DS   DT  C  11      28.988  50.954  27.566
+ATOM     87 DB   DT  C  11      26.046  48.696  24.961
+ATOM     88 DP   DT  C  12      32.700  50.540  27.176
+ATOM     89 DS   DT  C  12      34.156  46.672  28.565
+ATOM     90 DB   DT  C  12      32.104  42.866  26.416
+TER
+>>
+<< protein_  4
+ATOM     91 DP   DG  D   1      11.766  52.305  34.150
+ATOM     92 DS   DG  D   1      11.702  55.514  32.732
+ATOM     93 DB   DG  D   1      10.929  55.016  27.540
+ATOM     94 DP   DG  D   2      10.428  58.611  34.462
+ATOM     95 DS   DG  D   2      11.200  61.253  31.897
+ATOM     96 DB   DG  D   2       9.316  58.803  27.602
+ATOM     97 DP   DT  D   3      10.612  65.010  32.200
+ATOM     98 DS   DT  D   3       9.012  65.263  28.291
+ATOM     99 DB   DT  D   3       6.794  61.127  27.238
+ATOM    100 DP   DG  D   4       7.540  68.835  27.574
+ATOM    101 DS   DG  D   4       3.944  68.859  26.234
+ATOM    102 DB   DG  D   4       0.824  65.316  23.786
+ATOM    103 DP   DG  D   5       3.146  72.528  25.559
+ATOM    104 DS   DG  D   5       1.978  72.107  21.936
+ATOM    105 DB   DG  D   5      -1.459  67.921  21.833
+ATOM    106 DP   DG  D   6       0.992  75.061  19.807
+ATOM    107 DS   DG  D   6      -2.081  73.506  17.515
+ATOM    108 DB   DG  D   6      -4.343  69.368  20.396
+TER
+>>
+ENDMDL

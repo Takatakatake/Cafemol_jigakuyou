@@ -1,0 +1,52 @@
+**************************************************************
+**                                                          **
+**                 Input file of CafeMol                    **
+**                                                          **
+**        This file is for folding simulation by MD         **
+**                                                          **
+**************************************************************
+######  .はcafemolを走らせたターミナルのディレクトリを表す。inpファイルの場所を表しているのではないことに注意。
+#####
+<<<< filenames
+path = ./example/sh3_clementigo
+filename = sh3_clementigo
+**OUTPUT pdb crd velo dcd vdcd movie psf
+OUTPUT psf rst pdb movie dcd
+path_ini = ./pdb
+path_natinfo = ./ninfo
+****上２つはデフォルトで./pdb ./ninfoになっている。
+>>>>
+
+
+<<<< job_cntl
+i_run_mode = 2
+i_simulate_type = 1
+i_initial_state = 1
+>>>>
+
+
+<<<< unit_and_state
+i_seq_read_style = 1
+i_go_native_read_style = 1
+1    protein                   1SRL.pdb
+>>>>
+
+
+<<<< energy_function
+LOCAL(1) L_GO
+NLOCAL(1/1) GO EXV
+i_use_atom_protein = 0
+>>>>
+
+
+<<<< md_information
+n_step_sim = 1
+n_tstep(1) = 1000
+tstep_size = 0.4
+n_step_save = 100
+n_step_neighbor = 100
+tempk = 300.0
+n_seed = 1
+i_com_zeroing = 1
+i_no_trans_rot = 0
+>>>>

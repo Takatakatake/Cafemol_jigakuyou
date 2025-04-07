@@ -1,0 +1,1 @@
+/usr/bin/gfortran    -ffree-line-length-0 -cpp -O3 -DNDEBUG -O3 -O3 CMakeFiles/cafemol-bin.dir/main.F90.o  -o ../../bin/cafemol  libcafemol.a 

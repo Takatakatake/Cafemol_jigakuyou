@@ -1,0 +1,82 @@
+Start testing: Feb 10 06:23 JST
+----------------------------------------------------------
+1/3 Testing: Test_mod_unit
+1/3 Test: Test_mod_unit
+Command: "/home/yamada/cafemol/build/test/test_mod_unit"
+Directory: /home/yamada/cafemol/build/test
+"Test_mod_unit" start time: Feb 10 06:23 JST
+Output:
+----------------------------------------------------------
+Test mod_unit start
+Test units start at 10
+Test units are not repeated
+Test mod_unit end
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Test_mod_unit" end time: Feb 10 06:23 JST
+"Test_mod_unit" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: Test_mod_file
+2/3 Test: Test_mod_file
+Command: "/home/yamada/cafemol/build/test/test_mod_file"
+Directory: /home/yamada/cafemol/build/test
+"Test_mod_file" start time: Feb 10 06:23 JST
+Output:
+----------------------------------------------------------
+Test mod_file start
+Test initial status
+Test open file
+Test read line
+Read first line
+Read second line
+End of file
+Keep reading eof
+Write an only read file
+Rewind file
+Read first line
+Test close file
+Test write file
+Open file
+Write line
+Read an only write file
+Close file
+Test read/write file
+Open file
+Write line
+Rewind file
+Read line
+Close file
+Test mod_file end
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Test_mod_file" end time: Feb 10 06:23 JST
+"Test_mod_file" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: Test_mod_logger
+3/3 Test: Test_mod_logger
+Command: "/home/yamada/cafemol/build/test/test_mod_logger"
+Directory: /home/yamada/cafemol/build/test
+"Test_mod_logger" start time: Feb 10 06:23 JST
+Output:
+----------------------------------------------------------
+Test mod_logger start
+Test get logger level
+Test set logger level
+Test automatic naming
+Clean up
+Test mod_logger end
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Test_mod_logger" end time: Feb 10 06:23 JST
+"Test_mod_logger" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Feb 10 06:23 JST

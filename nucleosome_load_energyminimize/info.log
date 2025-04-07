@@ -1,0 +1,5 @@
+2022-07-22 18:03:05 yamauchi-Z490-S01 INFO [mpi] global myrank = 0
+2022-07-22 18:03:05 yamauchi-Z490-S01 INFO [mpi] total nprocs = 1
+2022-07-22 18:03:05 yamauchi-Z490-S01 INFO [omp] nthreads = 1
+2022-07-22 18:03:05 yamauchi-Z490-S01 INFO ncores = 1
+2022-07-22 18:03:05 yamauchi-Z490-S01 INFO i_run_mode = 2

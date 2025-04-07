@@ -1,0 +1,2 @@
+FILENAME 1a1f_cg.pdb 1a1f_AA.pdb
+FILENAME 3ut9_cg.pdb 3ut9_AA.pdb

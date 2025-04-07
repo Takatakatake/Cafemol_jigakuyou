@@ -1,0 +1,23 @@
+#!/bin/bash
+# dan  ==============================
+
+#BSUB -q normal
+#BSUB -n 1
+#BSUB -o data/log -e data/err
+#BSUB -J "cafemol"
+
+##BSUB -R "span[ptile=1]"
+##ptileはノードあたりのプロセス数
+
+pwd
+
+export I_MPI_DEVICE=rdssm
+#export I_MPI_DEVICE=ssm
+
+# infiniband を使っているか確認
+# [0] MPI startup(): RDMA, shared memory, and socket data transfer modes 
+#export I_MPI_DEBUG=2
+
+export PMI_RANK=0
+
+impijob ./go

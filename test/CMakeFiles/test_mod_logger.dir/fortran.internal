@@ -1,0 +1,7 @@
+# The fortran modules provided by this target.
+provides
+ mod_assertion.mod
+ mod_error.mod
+ mod_file.mod
+ mod_logger.mod
+ mod_unit.mod

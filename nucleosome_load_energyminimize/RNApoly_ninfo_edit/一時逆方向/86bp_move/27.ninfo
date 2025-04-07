@@ -1,0 +1,17 @@
+<<<< native bond length
+>>>>
+<<<< native bond angles
+>>>>
+<<<< 1-3 contacts with L_AICG2 or L_AICG2_PLUS
+>>>>
+<<<< native dihedral angles
+>>>>
+<<<< <<<< 1-4 contacts with L_AICG2_PLUS
+>>>>
+<<<< native contact
+** contact between unit     2 and     7
+contact    131      2      7     18   3727   -218    117       7.4156       1.0000            1       0.3000
+contact    132      2      7     18   3728   -218    118       7.6690       1.0000            1       0.3000
+contact    133      2      7     18   3731   -218    121      11.2413       1.0000            1       0.3000
+contact    134      2      7     21   3727   -215    117       7.2443       1.0000            1       0.3000
+>>>>
